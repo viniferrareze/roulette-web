@@ -9,6 +9,7 @@ interface ContainerProps {
 
 export const Container = styled.div<ContainerProps>`
    background: #232129;
+   height: 52px;
    border-radius: 10px;
    padding: 16px;
    width: 100%;
@@ -42,15 +43,15 @@ export const Container = styled.div<ContainerProps>`
    ${props =>
       props.isFocused &&
       css`
-         color: #fd6244;
-         border: 2px solid #fd6244;
+         color: #000;
+         border: 2px solid #000;
       `}
 
    /* Se tiver valor deixa a cor */
    ${props =>
       props.isField &&
       css`
-         color: #fd6244;
+         color: #000;
       `}
 
    & + div {
