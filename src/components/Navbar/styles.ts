@@ -61,6 +61,14 @@ export const RCollapse = styled(Collapse)`
    margin-bottom: 5px;
 `;
 
+export const RDropdownItem = styled(DropdownItem)`
+   span {
+      color: #212529;
+      white-space: nowrap;
+   }
+`;
+
+export const RSpan = styled.span``;
 export const RInput = styled.input``;
 export const RNavbarToggler = styled(NavbarToggler)``;
 export const RNavbarBrand = styled(NavbarBrand)``;
@@ -68,5 +76,4 @@ export const RNav = styled(Nav)``;
 export const RUncontrolledDropdown = styled(UncontrolledDropdown)``;
 export const RDropdownToggle = styled(DropdownToggle)``;
 export const RDropdownMenu = styled(DropdownMenu)``;
-export const RDropdownItem = styled(DropdownItem)``;
 export const RNavbarText = styled(NavbarText)``;

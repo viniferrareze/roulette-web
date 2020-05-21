@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { FaUserCircle } from 'react-icons/fa';
 
 import {
    RCollapse,
@@ -6,6 +8,7 @@ import {
    RNavbarToggler,
    RNavbarBrand,
    RNav,
+   RSpan,
    RUncontrolledDropdown,
    RDropdownToggle,
    RDropdownMenu,
@@ -25,10 +28,12 @@ const Navbar: React.FC = () => {
             <RNav className="ml-auto" navbar>
                <RUncontrolledDropdown nav inNavbar>
                   <RDropdownToggle nav caret>
-                     Rodrigo
+                     <FaUserCircle size={24} color="#fff" />
                   </RDropdownToggle>
                   <RDropdownMenu right>
-                     <RDropdownItem>Configurações</RDropdownItem>
+                     <RDropdownItem to="/configuracoes" tag={Link}>
+                        <RSpan>Configurações</RSpan>
+                     </RDropdownItem>
                      <RDropdownItem divider />
                      <RDropdownItem>Sair</RDropdownItem>
                   </RDropdownMenu>
