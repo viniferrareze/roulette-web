@@ -61,7 +61,7 @@ export const RButton = styled(Button)`
    font-weight: 600;
    font-size: 15px;
    color: #fff;
-   width: 10%;
+   width: 100px;
    height: 60px;
    border-radius: 50px;
    margin-top: 10px;

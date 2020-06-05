@@ -93,7 +93,7 @@ const SequenceOnClick: React.FC = () => {
             </Tbody>
          </RTable>
          <RButton type="submit" onClick={() => handleClear()}>
-            Zerar sequência
+            Limpar
          </RButton>
       </Card>
    );
