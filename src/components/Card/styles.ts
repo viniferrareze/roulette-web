@@ -2,9 +2,9 @@ import styled from 'styled-components';
 import { Card, CardHeader, CardBody, CardFooter } from 'reactstrap';
 
 export const RCard = styled(Card)`
-   background-color: rgba(0, 0, 0, 0.25) !important;
+   background-color: rgba(41, 97, 120, 0.25) !important;
    box-shadow: 1px 1px 30px 5px rgba(0, 0, 0, 0.1);
-   margin: 1rem !important;
+   margin: 5px !important;
 `;
 
 export const RCardHeader = styled(CardHeader)`

@@ -15,7 +15,7 @@ import {
 } from 'reactstrap';
 
 export const RNavbar = styled(Navbar)`
-   background-color: rgba(0, 0, 0, 0.25) !important;
+   background-color: rgba(0, 0, 0, 0.3) !important;
    box-shadow: inset 0 -0.1rem 0 rgba(0, 0, 0, 0.25);
    padding: 10px 50px 10px 50px;
 
@@ -63,6 +63,8 @@ export const RCollapse = styled(Collapse)`
 
 export const RDropdownItem = styled(DropdownItem)`
    span {
+      font-size: 15px;
+      font-weight: 400;
       color: #212529;
       white-space: nowrap;
    }

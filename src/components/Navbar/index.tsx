@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
    return (
       <RNavbar dark expand="md">
          <RNavbarBrand href="/">Roulette App</RNavbarBrand>
-         <RNavbarToggler onClick={toggle} />
+         {/* <RNavbarToggler onClick={toggle} />
          <RCollapse isOpen={isOpen} navbar>
             <RNav className="ml-auto" navbar>
                <RUncontrolledDropdown nav inNavbar>
@@ -35,11 +35,13 @@ const Navbar: React.FC = () => {
                         <RSpan>Configurações</RSpan>
                      </RDropdownItem>
                      <RDropdownItem divider />
-                     <RDropdownItem>Sair</RDropdownItem>
+                     <RDropdownItem>
+                        <RSpan>Sair</RSpan>
+                     </RDropdownItem>
                   </RDropdownMenu>
                </RUncontrolledDropdown>
             </RNav>
-         </RCollapse>
+         </RCollapse> */}
       </RNavbar>
    );
 };

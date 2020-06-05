@@ -2,7 +2,7 @@ import React from 'react';
 import { RCard, RCardBody, RCardFooter, RCardHeader, RCardH4 } from './styles';
 
 interface CardProps {
-   title: string;
+   title?: string;
    children: object;
    className?: string;
 }
