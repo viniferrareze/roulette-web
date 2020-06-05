@@ -16,14 +16,6 @@ const Dashboard: React.FC = () => {
       <RContainer>
          <Navbar />
          <RRow>
-            {/* <RCol xl="6">
-               <Marking />
-               <Historic />
-               <Board stone={stone} />
-            </RCol>
-            <RCol xl="6">
-               <Sequence />
-            </RCol> */}
             <RCol xl="12">
                <SequenceOnClick />
             </RCol>
