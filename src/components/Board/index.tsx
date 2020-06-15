@@ -4,16 +4,13 @@ import Card from '../Card';
 
 import { RCenter, RFlexEnd, RFlexStart, RText, RCol, RRow, RTextInformation } from './styles';
 
-interface CardProps {
-   stone?: number;
-}
-
-const Board: React.FC<CardProps> = ({ stone }) => {
+const Board: React.FC = () => {
+   const stone = Number(localStorage.getItem('@RouletteApp:stone_id'));
    return (
       <Card title="Round atual">
          <RRow>
             <RCol backgroundcolor="rgba(0, 128, 0, 1)" border bordertopleftradius />
-            <RCol backgroundcolor={stone === 3 ? 'rgba(255, 255, 255, 0.3)' : 'rgba(255, 0, 0, 0.5)'} border>
+            <RCol backgroundcolor={stone === 3 ? 'rgba(255, 255, 255, 0.1)' : 'rgba(255, 0, 0, 0.5)'} border>
                <RCenter>
                   <RText>3</RText>
                </RCenter>
@@ -28,17 +25,17 @@ const Board: React.FC<CardProps> = ({ stone }) => {
                   <RText>9</RText>
                </RCenter>
             </RCol>
-            <RCol backgroundcolor={stone === 12 ? 'rgba(255, 255, 255, 0.3)' : 'rgba(0, 0, 0, 0.5)'} border>
+            <RCol backgroundcolor={stone === 12 ? 'rgba(255, 255, 255, 0.3)' : 'rgba(255, 0, 0, 0.5)'} border>
                <RCenter>
                   <RText>12</RText>
                </RCenter>
             </RCol>
-            <RCol backgroundcolor={stone === 15 ? 'rgba(255, 255, 255, 0.3)' : 'rgba(255, 0, 0, 0.5)'} border>
+            <RCol backgroundcolor={stone === 15 ? 'rgba(255, 255, 255, 0.3)' : 'rgba(0, 0, 0, 0.5)'} border>
                <RCenter>
                   <RText>15</RText>
                </RCenter>
             </RCol>
-            <RCol backgroundcolor={stone === 18 ? 'rgba(255, 255, 255, 0.3)' : 'rgba(0, 0, 0, 0.5)'} border>
+            <RCol backgroundcolor={stone === 18 ? 'rgba(255, 255, 255, 0.3)' : 'rgba(255, 0, 0, 0.5)'} border>
                <RCenter>
                   <RText>18</RText>
                </RCenter>
@@ -58,17 +55,17 @@ const Board: React.FC<CardProps> = ({ stone }) => {
                   <RText>27</RText>
                </RCenter>
             </RCol>
-            <RCol backgroundcolor={stone === 30 ? 'rgba(255, 255, 255, 0.3)' : 'rgba(0, 0, 0, 0.5)'} border>
+            <RCol backgroundcolor={stone === 30 ? 'rgba(255, 255, 255, 0.3)' : 'rgba(255, 0, 0, 0.5)'} border>
                <RCenter>
                   <RText>30</RText>
                </RCenter>
             </RCol>
-            <RCol backgroundcolor={stone === 33 ? 'rgba(255, 255, 255, 0.3)' : 'rgba(255, 0, 0, 0.5)'} border>
+            <RCol backgroundcolor={stone === 33 ? 'rgba(255, 255, 255, 0.3)' : 'rgba(0, 0, 0, 0.5)'} border>
                <RCenter>
                   <RText>33</RText>
                </RCenter>
             </RCol>
-            <RCol backgroundcolor={stone === 36 ? 'rgba(255, 255, 255, 0.3)' : 'rgba(0, 0, 0, 0.5)'} border>
+            <RCol backgroundcolor={stone === 36 ? 'rgba(255, 255, 255, 0.3)' : 'rgba(255, 0, 0, 0.5)'} border>
                <RCenter>
                   <RText>36</RText>
                </RCenter>
@@ -100,17 +97,17 @@ const Board: React.FC<CardProps> = ({ stone }) => {
                   <RText>8</RText>
                </RCenter>
             </RCol>
-            <RCol backgroundcolor={stone === 11 ? 'rgba(255, 255, 255, 0.3)' : 'rgba(255, 0, 0, 0.5)'} border>
+            <RCol backgroundcolor={stone === 11 ? 'rgba(255, 255, 255, 0.3)' : 'rgba(0, 0, 0, 0.5)'} border>
                <RCenter>
                   <RText>11</RText>
                </RCenter>
             </RCol>
-            <RCol backgroundcolor={stone === 14 ? 'rgba(255, 255, 255, 0.3)' : 'rgba(0, 0, 0, 0.5)'} border>
+            <RCol backgroundcolor={stone === 14 ? 'rgba(255, 255, 255, 0.3)' : 'rgba(255, 0, 0, 0.5)'} border>
                <RCenter>
                   <RText>14</RText>
                </RCenter>
             </RCol>
-            <RCol backgroundcolor={stone === 17 ? 'rgba(255, 255, 255, 0.3)' : 'rgba(255, 0, 0, 0.5)'} border>
+            <RCol backgroundcolor={stone === 17 ? 'rgba(255, 255, 255, 0.3)' : 'rgba(0, 0, 0, 0.5)'} border>
                <RCenter>
                   <RText>17</RText>
                </RCenter>
@@ -130,17 +127,17 @@ const Board: React.FC<CardProps> = ({ stone }) => {
                   <RText>26</RText>
                </RCenter>
             </RCol>
-            <RCol backgroundcolor={stone === 29 ? 'rgba(255, 255, 255, 0.3)' : 'rgba(255, 0, 0, 0.5)'} border>
+            <RCol backgroundcolor={stone === 29 ? 'rgba(255, 255, 255, 0.3)' : 'rgba(0, 0, 0, 0.5)'} border>
                <RCenter>
                   <RText>29</RText>
                </RCenter>
             </RCol>
-            <RCol backgroundcolor={stone === 32 ? 'rgba(255, 255, 255, 0.3)' : 'rgba(0, 0, 0, 0.5)'} border>
+            <RCol backgroundcolor={stone === 32 ? 'rgba(255, 255, 255, 0.3)' : 'rgba(255, 0, 0, 0.5)'} border>
                <RCenter>
                   <RText>32</RText>
                </RCenter>
             </RCol>
-            <RCol backgroundcolor={stone === 35 ? 'rgba(255, 255, 255, 0.3)' : 'rgba(255, 0, 0, 0.5)'} border>
+            <RCol backgroundcolor={stone === 35 ? 'rgba(255, 255, 255, 0.3)' : 'rgba(0, 0, 0, 0.5)'} border>
                <RCenter>
                   <RText>35</RText>
                </RCenter>
@@ -173,12 +170,12 @@ const Board: React.FC<CardProps> = ({ stone }) => {
                   <RText>10</RText>
                </RCenter>
             </RCol>
-            <RCol backgroundcolor={stone === 13 ? 'rgba(255, 255, 255, 0.3)' : 'rgba(255, 0, 0, 0.5)'} border>
+            <RCol backgroundcolor={stone === 13 ? 'rgba(255, 255, 255, 0.3)' : 'rgba(0, 0, 0, 0.5)'} border>
                <RCenter>
                   <RText>13</RText>
                </RCenter>
             </RCol>
-            <RCol backgroundcolor={stone === 16 ? 'rgba(255, 255, 255, 0.3)' : 'rgba(0, 0, 0, 0.5)'} border>
+            <RCol backgroundcolor={stone === 16 ? 'rgba(255, 255, 255, 0.3)' : 'rgba(255, 0, 0, 0.5)'} border>
                <RCenter>
                   <RText>16</RText>
                </RCenter>
@@ -203,12 +200,12 @@ const Board: React.FC<CardProps> = ({ stone }) => {
                   <RText>28</RText>
                </RCenter>
             </RCol>
-            <RCol backgroundcolor={stone === 31 ? 'rgba(255, 255, 255, 0.3)' : 'rgba(255, 0, 0, 0.5)'} border>
+            <RCol backgroundcolor={stone === 31 ? 'rgba(255, 255, 255, 0.3)' : 'rgba(0, 0, 0, 0.5)'} border>
                <RCenter>
                   <RText>31</RText>
                </RCenter>
             </RCol>
-            <RCol backgroundcolor={stone === 34 ? 'rgba(255, 255, 255, 0.3)' : 'rgba(0, 0, 0, 0.5)'} border>
+            <RCol backgroundcolor={stone === 34 ? 'rgba(255, 255, 255, 0.3)' : 'rgba(255, 0, 0, 0.5)'} border>
                <RCenter>
                   <RText>34</RText>
                </RCenter>

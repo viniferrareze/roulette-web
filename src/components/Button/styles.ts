@@ -16,4 +16,10 @@ export const Container = styled.button`
    &:hover {
       background: ${shade(0.2, '#111')};
    }
+
+   img {
+      width: 30px;
+      margin-left: 10px;
+      margin-right: 10px;
+   }
 `;

@@ -15,6 +15,7 @@ import {
 } from 'reactstrap';
 
 export const RNavbar = styled(Navbar)`
+   height: 60px !important;
    background-color: rgba(0, 0, 0, 0.3) !important;
    box-shadow: inset 0 -0.1rem 0 rgba(0, 0, 0, 0.25);
    padding: 10px 50px 10px 50px;

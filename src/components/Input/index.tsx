@@ -38,12 +38,16 @@ const Input: React.FC<InputProps> = ({ name, icon: Icon, ...rest }) => {
          ref: inputRef.current,
          name: fieldName,
          path: 'value', // da onde será pega o value do input
+         clearValue(ref) {
+            ref.value = '';
+            ref.clear();
+         },
       });
    }, [fieldName, registerField]);
 
    return (
       <Container isErrored={!!error} isField={isField} isFocused={isFocused}>
-         {Icon && <Icon size={20} />}
+         {Icon && <Icon size={20} color="#ccc" />}
          <input
             onFocus={handleInputFocus}
             onBlur={handleInputBlur}

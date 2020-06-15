@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaUserCircle } from 'react-icons/fa';
 
+import { useAuth } from '../../hooks/auth';
+
 import {
    RCollapse,
    RNavbar,
@@ -20,10 +22,16 @@ const Navbar: React.FC = () => {
 
    const toggle = () => setIsOpen(!isOpen);
 
+   const { signOut } = useAuth();
+
+   async function handleSignOut() {
+      signOut();
+   }
+
    return (
       <RNavbar dark expand="md">
-         <RNavbarBrand href="/">Roulette App</RNavbarBrand>
-         {/* <RNavbarToggler onClick={toggle} />
+         <RNavbarBrand href="/dashboard">Roulette App</RNavbarBrand>
+         <RNavbarToggler onClick={toggle} />
          <RCollapse isOpen={isOpen} navbar>
             <RNav className="ml-auto" navbar>
                <RUncontrolledDropdown nav inNavbar>
@@ -31,17 +39,23 @@ const Navbar: React.FC = () => {
                      <FaUserCircle size={24} color="#fff" />
                   </RDropdownToggle>
                   <RDropdownMenu right>
+                     <RDropdownItem to="/dashboard" tag={Link}>
+                        <RSpan>Marcação por pedra</RSpan>
+                     </RDropdownItem>
+                     <RDropdownItem to="/sequenceOnClick" tag={Link}>
+                        <RSpan>Marcação por clique</RSpan>
+                     </RDropdownItem>
                      <RDropdownItem to="/configuracoes" tag={Link}>
                         <RSpan>Configurações</RSpan>
                      </RDropdownItem>
                      <RDropdownItem divider />
-                     <RDropdownItem>
+                     <RDropdownItem onClick={() => handleSignOut()}>
                         <RSpan>Sair</RSpan>
                      </RDropdownItem>
                   </RDropdownMenu>
                </RUncontrolledDropdown>
             </RNav>
-         </RCollapse> */}
+         </RCollapse>
       </RNavbar>
    );
 };
