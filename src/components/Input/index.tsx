@@ -38,7 +38,7 @@ const Input: React.FC<InputProps> = ({ name, icon: Icon, ...rest }) => {
          ref: inputRef.current,
          name: fieldName,
          path: 'value', // da onde será pega o value do input
-         clearValue(ref) {
+         clearValue(ref: any) {
             ref.value = '';
             ref.clear();
          },
@@ -53,6 +53,7 @@ const Input: React.FC<InputProps> = ({ name, icon: Icon, ...rest }) => {
             onBlur={handleInputBlur}
             defaultValue={defaultValue}
             ref={inputRef}
+            autoComplete="off"
             {...rest}
          />
 

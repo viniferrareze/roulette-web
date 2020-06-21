@@ -27,13 +27,13 @@ export const RCol = styled(Col)`
 
 export const RText = styled.h2`
    font-weight: 800 !important;
-   font-size: 25px;
+   font-size: 18px;
    color: rgba(255, 255, 255, 0.9);
 `;
 
 export const RTextInformation = styled.h2`
    font-weight: 800 !important;
-   font-size: 14px;
+   font-size: 10px;
    color: rgba(255, 255, 255, 0.9);
 `;
 

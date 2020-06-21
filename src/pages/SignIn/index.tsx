@@ -1,4 +1,4 @@
-import React, { useRef, useCallback } from 'react';
+import React, { useState, useRef, useCallback } from 'react';
 import { FiUser, FiLock } from 'react-icons/fi';
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
@@ -22,6 +22,7 @@ interface SignInFormData {
 
 const SignIn: React.FC = () => {
    const formRef = useRef<FormHandles>(null);
+   const [loading, setLoading] = useState(false);
 
    const { signIn } = useAuth();
 
@@ -37,10 +38,12 @@ const SignIn: React.FC = () => {
 
             await schema.validate(data, { abortEarly: false });
 
+            setLoading(true);
             await signIn({
                username: data.username,
                password: data.password,
             });
+            setLoading(false);
          } catch (err) {
             if (err instanceof Yup.ValidationError) {
                const errors = getValidationErrors(err);
@@ -66,7 +69,7 @@ const SignIn: React.FC = () => {
                <Input name="username" icon={FiUser} placeholder="Usuário" />
                <Input name="password" icon={FiLock} type="password" placeholder="Senha" />
 
-               <Button type="submit">Entrar</Button>
+               <Button type="submit" loading={loading}>Entrar</Button>
             </Form>
          </Content>
 

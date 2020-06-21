@@ -23,6 +23,7 @@ import {
 import api from '../../services/api';
 import getValidationErrors from '../../utils/getValidationErrors';
 import stones from '../../utils/stones.json';
+import clearInput from '../../utils/cleanInput';
 
 import Navbar from '../../components/Navbar';
 import Board from '../../components/Board';
@@ -75,6 +76,7 @@ const Dashboard: React.FC = () => {
          corHistoric: '',
       },
    ]);
+
 
    // Função responsavel por criar o game
    async function handleCreateGamer() {
@@ -143,6 +145,8 @@ const Dashboard: React.FC = () => {
             },
          ]);
 
+         // Criado função para limpar o input
+         clearInput('inputStone');
          await setLoading(false);
       } catch (err) {
          if (err instanceof Yup.ValidationError) {
@@ -246,6 +250,7 @@ const Dashboard: React.FC = () => {
                   </RButton>
                   <RForm ref={formRef} onSubmit={handleSubmit}>
                      <RInput
+                        id="inputStone"
                         name="stone"
                         icon={GiGlassBall}
                         placeholder="Pedra sorteada"
