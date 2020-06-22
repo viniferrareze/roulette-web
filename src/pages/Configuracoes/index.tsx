@@ -41,8 +41,10 @@ const Configuracoes: React.FC = () => {
    const toggle = () => setModal(!modal);
 
    async function getConfiguracoes() {
+      await setLoading(true);
       await api.get('/situations').then(response => {
          setConfiguracoes(response.data);
+         setLoading(false);
       });
    }
 
@@ -73,9 +75,9 @@ const Configuracoes: React.FC = () => {
             ],
          });
 
-         await setLoading(false);
          await setModal(false);
          getConfiguracoes();
+         setLoading(false);
       } catch (err) {
          if (err instanceof Yup.ValidationError) {
             const errors = getValidationErrors(err);
@@ -89,7 +91,7 @@ const Configuracoes: React.FC = () => {
          <Navbar />
          <RRow>
             <RCol xl="12">
-               <Card title="Configuração das notificações">
+               <Card title="Configuração das notificações" loading={loading}>
                   <RTable responsive>
                      <Thead>
                         <Tr>
