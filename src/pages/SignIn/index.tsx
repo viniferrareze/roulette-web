@@ -42,7 +42,7 @@ const SignIn: React.FC = () => {
             await signIn({
                username: data.username,
                password: data.password,
-            });
+            })
             setLoading(false);
          } catch (err) {
             if (err instanceof Yup.ValidationError) {
@@ -54,6 +54,7 @@ const SignIn: React.FC = () => {
             }
 
             toast.error('Ocorreu um erro ao fazer login, cheque as credenciais.');
+            setLoading(false);
          }
       },
       [signIn],
