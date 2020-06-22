@@ -217,7 +217,7 @@ const Dashboard: React.FC = () => {
 
    // Função responsavel por detetar o game
    async function handleDeleteGamer() {
-      // await api.delete(`gamer/${Number(getGamerId())}`);
+      await api.delete('gamer');
       await setDisabled(true);
       await removeStorage();
       await setSequence([
