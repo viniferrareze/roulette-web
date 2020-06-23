@@ -30,7 +30,7 @@ const Navbar: React.FC = () => {
 
    return (
       <RNavbar dark expand="md">
-         <RNavbarBrand href="/dashboard">Roulette App</RNavbarBrand>
+         <RNavbarBrand to="/dashboard" tag={Link}>Roulette App</RNavbarBrand>
          <RNavbarToggler onClick={toggle} />
          <RCollapse isOpen={isOpen} navbar>
             <RNav className="ml-auto" navbar>

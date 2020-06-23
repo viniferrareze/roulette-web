@@ -13,7 +13,12 @@ export const RCardHeader = styled(CardHeader)`
    justify-content: center;
 `;
 
-export const RCardBody = styled(CardBody)``;
+export const RCardBody = styled(CardBody)`
+   img {
+      width: 100px;
+      height: auto;
+   }
+`;
 
 export const RCardFooter = styled(CardFooter)``;
 
