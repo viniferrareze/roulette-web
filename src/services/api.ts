@@ -24,7 +24,7 @@ api.interceptors.request.use(
 api.interceptors.response.use(
    (response: any) => response,
    async (err: any) => {
-      if (err.response?.status === 403) {
+      if (err.response?.status >= 400) {
          const { signOut } = useAuth();
 
          await signOut();
