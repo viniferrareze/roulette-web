@@ -1,6 +1,5 @@
-/* eslint-disable no-param-reassign */
+/* eslint-disable @typescript-eslint/no-explicit-any, no-param-reassign */
 import axios from 'axios';
-import { useAuth } from '../hooks/auth';
 
 const api = axios.create({
    baseURL: 'https://api-roulette-app.herokuapp.com/',
@@ -16,21 +15,26 @@ api.interceptors.request.use(
 
       return config;
    },
-   (error: any) => {
+   async (error: any) => {
+      if (error.response?.status >= 400) {
+         // Limpa o storage
+         await localStorage.removeItem('@RouletteApp:token');
+         await localStorage.removeItem('@RouletteApp:user');
+      }
       return Promise.reject(error);
    },
 );
 
 api.interceptors.response.use(
    (response: any) => response,
-   async (err: any) => {
-      if (err.response?.status >= 400) {
-         const { signOut } = useAuth();
-
-         await signOut();
+   async (error: any) => {
+      if (error.response?.status >= 400) {
+         // Limpa o storage
+         await localStorage.removeItem('@RouletteApp:token');
+         await localStorage.removeItem('@RouletteApp:user');
       }
 
-      return Promise.reject(err);
+      return Promise.reject(error);
    },
 );
 
