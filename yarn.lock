@@ -1602,13 +1602,6 @@
     "@types/history" "*"
     "@types/react" "*"
 
-"@types/react-toast-notifications@^2.4.0":
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/@types/react-toast-notifications/-/react-toast-notifications-2.4.0.tgz#0ca0732cfae5a6ef5939a676fffac6e64c78bc25"
-  integrity sha512-nBI6gQ0E5gwi3IcTrVOR3oKoMGRfH1gK67kI6RIKUmiV5Sc3ZC/eymYBFt6iDo0dhlYET6kdtR0tcUh9h5L0sQ==
-  dependencies:
-    "@types/react" "*"
-
 "@types/react-toastify@^4.1.0":
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/@types/react-toastify/-/react-toastify-4.1.0.tgz#604e712855dd677916d5c66af595d3b590f5d95d"
@@ -8861,9 +8854,9 @@ qs@6.7.0:
   integrity sha512-VCdBRNFTX1fyE7Nb6FYoURo/SPe62QCaAyzJvUjwRaIsc+NePBEniHlvxFmmX56+HZphIGtV0XeCirBtpDrTyQ==
 
 qs@~6.5.2:
-  version "6.5.2"
-  resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
-  integrity sha512-N5ZAX4/LxJmF+7wN74pUD6qAh9/wnvdQcjq9TZjevvXzSUo7bfmw91saqMjzGS2xq91/odN2dW/WOl7qQHNDGA==
+  version "6.5.3"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.3.tgz#3aeeffc91967ef6e35c0e488ef46fb296ab76aad"
+  integrity sha512-qxXIEh4pCGfHICj1mAJQ2/2XVZkjCDTcEgfoSQxc/fYivUZxTkk7L3bDBJSoNrEzXI17oUO5Dp07ktqE5KzczA==
 
 query-string@^4.1.0:
   version "4.3.4"
